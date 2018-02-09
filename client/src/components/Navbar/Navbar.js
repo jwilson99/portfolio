@@ -2,7 +2,8 @@ import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Portfolio from '../Portfolio/Portfolio';
 import './navbar.css';
-import headshot from '../profile.jpg';
+import headshot from './images/profile.jpg';
+import Images from './images/images';
 
 const styles = {
     headline: {
@@ -25,8 +26,19 @@ const Navbar = () => (
                     </div>
 
                     <p id="aboutText">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias amet animi, dicta doloremque doloribus eum eveniet explicabo nostrum nulla provident, quasi qui repellat vitae voluptatibus. Consectetur harum, in. Debitis.
+                        I am a certified full stack web developer with a bachelor's of science in biology and a background in molecular genetics.
+                        <br/>
+                        <br/>
+                        After working in a molecular neuroscience lab as a laboratory coordinator, I decided that while many of the tasks involved in the job, such as data analysis and presentation, suited me well; however, I felt I was often detracted from these tasks by daily wet lab work.
+                        <br/>
+                        <br/>
+                        I have incorporated my skills in research, documentation, and attention to detail to create a portfolio that incorporated my love for creative problem solving.
                     </p>
+                </div>
+                <h2 style={styles.headline}>Skills</h2>
+                <hr/>
+                <div className="skills">
+                    <Images />
                 </div>
             </div>
         </Tab>
