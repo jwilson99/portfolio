@@ -1,36 +1,23 @@
-import React, {Component} from 'react';
-import FontIcon from 'material-ui/FontIcon';
-import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
-import Paper from 'material-ui/Paper';
+import React from 'react';
 import './footer.css';
+import github from './images/github.png';
+import linkedin from './images/linkedin.png';
 
-const recentsIcon = <FontIcon className="material-icons">GitHub</FontIcon>;
-const favoritesIcon = <FontIcon className="material-icons">LinkedIn</FontIcon>;
+// creates Footer component to render to the page
+const Footer = () => {
+    return (
+        <footer className="footer">
+            <div className="footerItem">
+                <a href="https://github.com/jwilson99">
+                <img src={github} className="icon"/>
+                </a>
+                <a href="https://www.linkedin.com/in/julie-wilson-2673a5b6/">
+                <img src={linkedin} className="icon"/>
+                </a>
+            </div>
+        </footer>
+    )
+};
 
-
-class Footer extends Component {
-    state = {
-        selectedIndex: 2,
-    };
-
-    select = (index) => this.setState({selectedIndex: index});
-
-    render() {
-        return (
-            <Paper zDepth={1}>
-                <BottomNavigation selectedIndex={this.state.selectedIndex} className="bottomnav">
-                    <BottomNavigationItem
-                        icon={recentsIcon}
-                        onClick={() => this.select(0)}
-                    />
-                    <BottomNavigationItem
-                        icon={favoritesIcon}
-                        onClick={() => this.select(1)}
-                    />
-                </BottomNavigation>
-            </Paper>
-        );
-    }
-}
-
+// exports Footer for external use
 export default Footer;

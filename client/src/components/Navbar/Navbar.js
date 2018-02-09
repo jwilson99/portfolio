@@ -1,6 +1,8 @@
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Portfolio from '../Portfolio/Portfolio';
+import './navbar.css';
+import headshot from '../profile.jpg';
 
 const styles = {
     headline: {
@@ -12,27 +14,33 @@ const styles = {
 };
 
 const Navbar = () => (
-    <Tabs>
+    <Tabs className="tabContainer">
         <Tab label="About" >
-            <div>
+            <div className="tabContent">
                 <h2 style={styles.headline}>About</h2>
-                <p>
-                    This is an example tab.
-                </p>
-                <p>
-                    You can put any sort of HTML or react component in here. It even keeps the component state!
-                </p>
+            <hr/>
+                <div className="about">
+                    <div>
+                        <img src={headshot} id="headshot"/>
+                    </div>
+
+                    <p id="aboutText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias amet animi, dicta doloremque doloribus eum eveniet explicabo nostrum nulla provident, quasi qui repellat vitae voluptatibus. Consectetur harum, in. Debitis.
+                    </p>
+                </div>
             </div>
         </Tab>
         <Tab label="Portfolio" >
-            <div>
+            <div className="tabContent">
                 <h2 style={styles.headline}>Portfolio</h2>
+                <hr/>
                 <Portfolio/>
             </div>
         </Tab>
         <Tab label="Contact" >
-            <div>
+            <div className="tabContent">
                 <h2 style={styles.headline}>Contact</h2>
+                <hr/>
                 <p>
                     This is a third example tab.
                 </p>

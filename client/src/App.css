@@ -1,8 +1,13 @@
+body {
+  height: 100%;
+}
+
 .App {
   text-align: left;
-  background-color: black;
+  background-color: #222;
   color: white;
   position: relative;
+  height: 100vh;
 }
 
 .App-logo {

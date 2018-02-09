@@ -1,4 +1,20 @@
-.bottomnav {
+.footer {
     position: absolute;
     bottom: 0;
+    left: 0;
+    background-color: #00bcd4;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footerItem {
+    background-color: #00bcd4;
+}
+
+.icon {
+    height: 40px;
+    padding: 0.5%;
 }
