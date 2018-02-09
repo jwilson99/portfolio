@@ -24,7 +24,7 @@ const tilesData = [
     {
         img: lotustracker,
         title: 'Lotus Tracker',
-        tools: 'React, Node, CSS Grid',
+        tools: 'React, Express, Node, CSS Grid, Google Charts, Bcrypt',
     },
     {
         img: tcgdeckbuilder,
@@ -57,7 +57,7 @@ const GridListExampleSimple = () => (
                     subtitle={<span>Tools: <b>{tile.tools}</b></span>}
                     actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
                 >
-                    <img src={tile.img} />
+                    <img src={tile.img} alt={'Screenshot and link to' + tile.title}/>
                 </GridTile>
             ))}
         </GridList>

@@ -22,7 +22,7 @@ const Navbar = () => (
             <hr/>
                 <div className="about">
                     <div>
-                        <img src={headshot} id="headshot"/>
+                        <img src={headshot} id="headshot" alt="head shot of Julie Wilson"/>
                     </div>
 
                     <p id="aboutText">

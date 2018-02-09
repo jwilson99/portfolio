@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import html from './html.png';
 import css from './css.png';
 import js from './js.png';
@@ -14,10 +15,60 @@ import chai from './chai.png';
 
 class icons extends Component {
     render() {
-        const array = [html,css,js,jquery,reactjs,nodejs,expressjs,mongodb,mysql,git,mocha,chai];
+
+        const array = [
+            {
+                name: "h t m l",
+                img: html
+            },
+            {
+                name: "c s s",
+                img: css
+            },
+            {
+                name: "javascript",
+                img: js
+            },
+            {
+                name: "j query",
+                img: jquery
+            },
+            {
+                name: "react js",
+                img: reactjs
+            },
+            {
+                name: "node js",
+                img: nodejs
+            },
+            {
+                name: "express js",
+                img: expressjs
+            },
+            {
+                name: "mongo d b",
+                img: mongodb
+            },
+            {
+                name: "my sql",
+                img: mysql
+            },
+            {
+                name: "git",
+                img: git
+            },
+            {
+                name: "mocha",
+                img: mocha
+            },
+            {
+                name: "chai",
+                img: chai
+            }
+        ];
 
         const images = array.map ( (image) => {
-            return <img src={image} className="skillIcon"/>
+            return <img src={image.img} alt={image.name} className="skillIcon"/>
         });
 
         return (

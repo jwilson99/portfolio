@@ -13,6 +13,9 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
+                    <p>
+                        Julie Wilson - Full Stack Web Developer
+                    </p>
                 </header>
                 <MuiThemeProvider>
                     <Navbar/>

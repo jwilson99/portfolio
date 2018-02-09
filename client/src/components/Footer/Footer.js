@@ -8,11 +8,11 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footerItem">
-                <a href="https://github.com/jwilson99">
-                <img src={github} className="icon"/>
+                <a href="https://github.com/jwilson99" target="_blank" rel="noopener noreferrer">
+                <img src={github} className="icon" alt="icon and link to GitHub account"/>
                 </a>
-                <a href="https://www.linkedin.com/in/julie-wilson-2673a5b6/">
-                <img src={linkedin} className="icon"/>
+                <a href="https://www.linkedin.com/in/julie-wilson-2673a5b6/" target="_blank" rel="noopener noreferrer">
+                <img src={linkedin} className="icon" alt="icon and link to LinkedIn account"/>
                 </a>
             </div>
         </footer>
