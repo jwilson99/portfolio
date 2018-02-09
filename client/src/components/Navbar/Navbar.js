@@ -1,6 +1,7 @@
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Portfolio from '../Portfolio/Portfolio';
+import Contact from '../Contact/Contact';
 import './navbar.css';
 import headshot from './images/profile.jpg';
 import Images from './images/images';
@@ -54,7 +55,7 @@ const Navbar = () => (
                 <h2 style={styles.headline}>Contact</h2>
                 <hr/>
                 <p>
-                    This is a third example tab.
+                    <Contact />
                 </p>
             </div>
         </Tab>
