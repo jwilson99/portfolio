@@ -9,8 +9,15 @@
 .about {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+.icons {
+    text-align: center;
 }
 
+.skillIcon {
+    width: 100px;
+}
 #headshot {
     max-width: 25vw;
     border-radius: 50%;
@@ -21,10 +28,28 @@
     padding: 1% 1% 0 5%;
 }
 
-.icons {
-    text-align: center;
-}
 
-.skillIcon {
-    width: 100px;
+@media screen and (max-width: 700px) {
+    .about {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .skills {
+        margin-bottom: 50px;
+    }
+    .skillIcon {
+        width: 50px;
+    }
+    #headshot {
+        max-width: 50vw;
+        border-radius: 50%;
+        margin: 5% 1% 0 5%;
+    }
+
+    #aboutText {
+        padding: 1% 1% 0 5%;
+        width: 100%;
+    }
+
 }
