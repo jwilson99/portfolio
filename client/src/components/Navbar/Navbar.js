@@ -54,9 +54,7 @@ const Navbar = () => (
             <div className="tabContent">
                 <h2 style={styles.headline}>Contact</h2>
                 <hr/>
-                <p>
                     <Contact />
-                </p>
             </div>
         </Tab>
     </Tabs>

@@ -1,37 +1,79 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './contact.css';
 
 // creates Contact component to render to the page
-const Contact = () => {
-    return (
-        <form>
-            <label htmlFor="formName" className="formLabel" >
-                Name
-            </label>
-            <br />
-            <input id="formName" type="text" name="email" className="formInput" />
-            <br /><br />
+class Contact extends Component {
 
-            <label htmlFor="formEmail" className="formLabel" >
-                Email
-            </label>
-            <br />
-            <input id="formEmail" type="email" className="formInput"/>
-            <br /><br />
+    constructor() {
+        super();
+        this.state={};
+    }
 
-            <label htmlFor="formMessage" className="formLabel" >
-                Message
-            </label>
-            <br />
-            <textarea id="formMessage" type="text" name="email" className="formInput" />
-            <br /> <br />
+    getValues = (event) => {
+        this.setState({[event.target.name]: event.target.value});
+        console.log(this.state);
+    };
 
-            <button id="sendMail">
-                Send Message
-            </button>
+    sendData = (event) => {
+        event.preventDefault();
+        console.log("submit!");
+        console.log(this.state);
+    };
 
-        </form>
-    )
+    render() {
+        return (
+            <form>
+                <label
+                    htmlFor="formName"
+                    className="formLabel" >
+                    Name
+                </label>
+                <br />
+                <input
+                    id="formName"
+                    type="text"
+                    name="name"
+                    className="formInput"
+                    onChange={this.getValues} />
+                <br /><br />
+
+                <label
+                    htmlFor="formEmail"
+                    className="formLabel" >
+                    Email
+                </label>
+                <br />
+                <input
+                    id="formEmail"
+                    type="email"
+                    name="email"
+                    className="formInput"
+                    onChange={this.getValues} />
+                <br /><br />
+
+                <label
+                    htmlFor="formMessage"
+                    className="formLabel" >
+                    Message
+                </label>
+                <br />
+                <textarea
+                    id="formMessage"
+                    type="text"
+                    name="message"
+                    className="formInput"
+                    onChange={this.getValues} />
+                <br /> <br />
+
+                <button
+                    onClick={this.sendData}>
+                    Submit
+                </button>
+
+            </form>
+        )
+    }
+
 };
 
 // exports Contact for external use
